@@ -45,9 +45,9 @@ app.get('/', (req, res) => {
 app.get('/driver/:name', (req, res) => {
   const driver = req.params.name.toLowerCase();
   if (drivers[driver]) {
-    res.send(drivers[driver]);
+    res.json(drivers[driver]);
   } else {
-    res.send(drivers['unknown']);
+    res.json(drivers['unknown']);
   }
 });
 
