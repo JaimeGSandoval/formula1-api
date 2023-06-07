@@ -51,4 +51,4 @@ app.get('/driver/:name', (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log('Server is running'));
+app.listen(process.env.PORT || PORT, () => console.log('Server is running'));
