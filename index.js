@@ -7,7 +7,11 @@ const getDriver = async () => {
   const driverInput = document.querySelector('input').value;
 
   try {
-    const response = await fetch(`http://localhost:8000/driver/${driverInput}`);
+    // const response = await fetch(`http://localhost:8000/driver/${driverInput}`);
+    const response = await fetch(
+      `https://cooperative-top-coat-elk.cyclic.app/driver/${driverInput}`
+    );
+
     const driverData = await response.json();
 
     driverName.innerText = `Name: ${driverData.name}`;
