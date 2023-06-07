@@ -7,7 +7,7 @@ const getDriver = async () => {
   const driverInput = document.querySelector('input').value;
 
   try {
-    const response = await fetch(`http://localhost:8000/driver/${driverInput}`);
+    const response = await fetch(`/driver/${driverInput}`);
     const driverData = await response.json();
 
     driverName.innerText = `Name: ${driverData.name}`;
