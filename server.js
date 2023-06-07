@@ -5,7 +5,6 @@ const path = require('path');
 const PORT = 8000;
 
 app.use(cors());
-// app.use(express.static('./main.js'));
 
 const drivers = {
   'max verstappen': {
@@ -41,8 +40,7 @@ const drivers = {
 };
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-  // res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/driver/:name', (req, res) => {
